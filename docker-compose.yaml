@@ -8,8 +8,4 @@ services:
     image: 100jokes-service:latest
     container_name: 100jokes-service
     ports:
-      - "8080:5000"
-    networks:
-      - Python-Flask-Network
-networks:
-  Python-Flask-Network:
+      - "8090:5000"
