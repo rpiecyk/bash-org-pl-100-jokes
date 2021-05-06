@@ -25,6 +25,13 @@ pipeline {
                 sh 'echo "preparing package..."'
             }
         }
+        stage('Deploy') {
+            steps {
+                input(id: "Run service", message: "Deploy ${params.project_name}?", ok: 'Deploy')
+                sh 'echo "docker-compose up -d"'
+            }
+        }
+
     }
 }
 
